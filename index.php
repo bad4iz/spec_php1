@@ -7,12 +7,14 @@
     $year = strftime('%Y');
     $welkome='';
 
-    if($hour<=6){
+    if($hour<7){
         $welkome='Доброй ночи';
-    }elseif($hour<=12){
+    }elseif($hour<12){
         $welkome='Доброе утро';
-    }elseif($hour<=18){
+    }elseif($hour<18){
         $welkome='Добрый день1';
+    }elseif($hour<23){
+        $welkome='Добрый вечер';
     }else{
         $welkome='Доброй ночи';
     }
@@ -44,7 +46,7 @@
 
         <div id="content">
             <!-- Заголовок -->
-            <h1><?= $welcome ?>, Гость!</h1>
+            <h1><?= $welkome ?>, Гость!</h1>
             <!-- Заголовок -->
 
             <blockquote>
