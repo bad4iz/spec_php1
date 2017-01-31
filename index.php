@@ -1,9 +1,26 @@
 <?php
 // Установка локали и выбор значений даты
     setlocale(LC_ALL, "russian");
+    $hour = (int) strftime('%H');
     $day = strftime('%d');
     $mon = iconv("windows-1251", "UTF-8", strftime('%B'));;
     $year = strftime('%Y');
+    $welkome='';
+
+    if($hour<=6){
+        $welkome='Доброй ночи';
+    }elseif($hour<=12){
+        $welkome='Доброе утро';
+    }elseif($hour<=18){
+        $welkome='Добрый день1';
+    }else{
+        $welkome='Доброй ночи';
+    }
+
+
+
+
+
 ?>
 
 
@@ -27,7 +44,7 @@
 
         <div id="content">
             <!-- Заголовок -->
-            <h1>Добро пожаловать на наш сайт!</h1>
+            <h1><?= $welcome ?>, Гость!</h1>
             <!-- Заголовок -->
 
             <blockquote>
