@@ -2,7 +2,7 @@
 // Установка локали и выбор значений даты
     setlocale(LC_ALL, "russian");
     $day = strftime('%d');
-    $mon = strftime('%B');
+    $mon = iconv("windows-1251", "UTF-8", strftime('%B'));;
     $year = strftime('%Y');
 ?>
 
@@ -32,7 +32,7 @@
 
             <blockquote>
                 <?
-        echo 'Сегодня ', $day, ' число, ', $mon, ' месяц, ', $year, ' год.';
+        echo "Сегодня $day число, $mon месяц, $year год.";
         ?>
             </blockquote>
             <!-- Область основного контента -->
