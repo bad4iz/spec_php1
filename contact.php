@@ -1,6 +1,19 @@
 <?
 $value =  ini_get("post_max_size");
-$text = preg_replace("/[^0-9]+/", '', $value);
+$number = preg_replace("/[^0-9]+/", '', $value);
+$text = mb_strtolower(preg_replace("/[^MBKGmkgb]+/", '', $value));
+$size = 0;
+switch ($text){
+    case 'g':
+        $size = $number*1024;
+    case 'm':
+        $size = $number*1024;
+    case 'k':
+        $size = $number*1024;
+    case 'b':
+        $size = $number;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
