@@ -1,18 +1,23 @@
 <?
 $value =  ini_get("post_max_size");
 $number = preg_replace("/[^0-9]+/", '', $value);
-$text = mb_strtolower(preg_replace("/[^MBKGmkgb]+/", '', $value));
-$size = 0;
+$text = preg_replace("/[^GMKKBgmkb]+/",'', $value);
+$text =  strtolower($text);
+$size = 1;
 switch ($text){
-    case 'g':
-        $size = $number*1024;
-    case 'm':
-        $size = $number*1024;
-    case 'k':
-        $size = $number*1024;
+    case "g":
+        $size *= $number*1024;
+    case "m":
+        $size *= $number*1024;
+    case "k":
+        $size *= $number*1024;
     case 'b':
-        $size = $number;
+        $size *= $number;
+        break;
+    default:
+        $size *= $number;
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -53,7 +58,7 @@ switch ($text){
       <br />
       <input type='submit' value='Отправить' />
     </form>
-      <p>Максимальный размер отправляемых данных <?= $text ?> байт.</p>
+      <p>Максимальный размер отправляемых данных <?=  $size ?> байт.</p>
 
       <!-- Область основного контента -->
 
