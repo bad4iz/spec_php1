@@ -43,7 +43,15 @@ $rows = 9;
     </form>
     <!-- Таблица -->
     <table border='1' width="200">
-     for
+    <?
+     for ($i = 0; $i < $cols; $i++){
+         echo "<tr>"
+        for ($j = 0; $j < $rows; $j++){
+         <t>
+        }
+         echo "</tr>"
+     }
+         ?>
       <tr>
         <td>5</td>
         <td>10</td>
