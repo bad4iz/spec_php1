@@ -44,9 +44,9 @@ $rows = 9;
     <!-- Таблица -->
     <table border='1' width="200">
     <?
-     for ($i = 0; $i < $cols; $i++){
+     for ($i = 1; $i < $cols; $i++){
          echo "<tr>";
-        for ($j = 0; $j < $rows; $j++){
+        for ($j = 1; $j < $rows; $j++){
          echo "<td>".($i * $j)." </td>";
         }
          echo "</tr>";
