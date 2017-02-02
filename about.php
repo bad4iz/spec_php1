@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 
+
+
+
 <head>
   <title>О сайте</title>
   <meta charset="utf-8" />
