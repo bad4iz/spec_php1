@@ -47,7 +47,7 @@ $rows = 9;
      for ($i = 0; $i < $cols; $i++){
          echo "<tr>";
         for ($j = 0; $j < $rows; $j++){
-         echo "<td>".($i * $)." </td>";
+         echo "<td>".($i * $j)." </td>";
         }
          echo "</tr>";
      }
