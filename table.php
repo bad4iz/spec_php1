@@ -45,11 +45,11 @@ $rows = 9;
     <table border='1' width="200">
     <?
      for ($i = 0; $i < $cols; $i++){
-         echo "<tr>"
+         echo "<tr>";
         for ($j = 0; $j < $rows; $j++){
-         echo "<td>$i * $J </td>"
+         echo "<td>".($i * $)." </td>";
         }
-         echo "</tr>"
+         echo "</tr>";
      }
          ?>
 
