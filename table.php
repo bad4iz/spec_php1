@@ -1,6 +1,13 @@
 <?
-$cols = 9;
-$rows = 9;
+function drawTable($cols = 9, $rows = 9, $collor="red"){
+    for ($i = 1; $i < $cols; $i++){
+        echo "<tr>";
+        for ($j = 1; $j < $rows; $j++){
+            echo "<td>".($i * $j)." </td>";
+        }
+        echo "</tr>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,14 +51,8 @@ $rows = 9;
     <!-- Таблица -->
     <table border='1' width="200">
     <?
-     for ($i = 1; $i < $cols; $i++){
-         echo "<tr>";
-        for ($j = 1; $j < $rows; $j++){
-         echo "<td>".($i * $j)." </td>";
-        }
-         echo "</tr>";
-     }
-         ?>
+    drawTable();
+    ?>
 
     </table>
     <!-- Таблица -->
