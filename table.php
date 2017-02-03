@@ -1,10 +1,13 @@
 <?
-function drawTable($cols = 10, $rows = 10, $collor="red"){
+function drawTable($cols = 10, $rows = 10, $color="red"){
     for ($i = 1; $i < $cols; $i++){
         echo "<tr>";
         for ($j = 1; $j < $rows; $j++){
-            if (($j == 1)) {
-                $style = "style='background-color:$collor' ;";
+            if ($j == 1) {
+                $style = "style='background-color:$color' ;";
+            }
+            else {
+                $style = "style='background-color:none' ;";
             }
             echo "<td $style>".($i * $j)."</td>";
         }
