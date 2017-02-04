@@ -38,7 +38,7 @@ require_once "inc/data.inc.php"
 </div>
 <div id="nav">
     <!-- Навигация -->
-<? require_once "inc/menu.inc.phpиз"; ?>
+<? require_once "inc/menu.inc.php"; ?>
     <!-- Навигация -->
 </div>
 <div id="footer">
