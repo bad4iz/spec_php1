@@ -1,3 +1,4 @@
+<?
 // Установка локали и выбор значений даты
 setlocale(LC_ALL, "russian");
 $hour = (int)strftime('%H');
