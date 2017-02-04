@@ -1,4 +1,7 @@
-
+<?
+require_once "lib.inc.php"
+require_once "data.inc.php"
+?>
 
 
 <!DOCTYPE html>
