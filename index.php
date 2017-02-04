@@ -1,6 +1,6 @@
 <?
-require_once "lib.inc.php"
-require_once "data.inc.php"
+require_once "inc/lib.inc.php";
+require_once "inc/data.inc.php"
 ?>
 
 
@@ -17,6 +17,7 @@ require_once "data.inc.php"
 
 <div id="header">
     <!-- Верхняя часть страницы -->
+<? require_once "inc/top.inc.php"; ?>
 
     <!-- Верхняя часть страницы -->
 </div>
