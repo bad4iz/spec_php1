@@ -33,12 +33,12 @@ require_once "inc/data.inc.php"
         ?>
     </blockquote>
     <!-- Область основного контента -->
-
+<? require_once "inc/index.inc.php" ?>
     <!-- Область основного контента -->
 </div>
 <div id="nav">
     <!-- Навигация -->
-
+<? require_once "inc/menu.inc.phpиз"; ?>
     <!-- Навигация -->
 </div>
 <div id="footer">
