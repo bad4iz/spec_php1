@@ -6,8 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $operator = trim(strip_tags($_POST['operator']));
 }
 $operator = ($operator == /[-+*/]/) ? $operator : false;
-$rows = ($rows) ? $rows : 10;
-$color = ($color) ? $color : 'yellow';
+
 
 
 ?>
