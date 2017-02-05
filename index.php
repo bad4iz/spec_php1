@@ -58,7 +58,7 @@ switch($id){ case 'about': $title = 'О сайте'; $header = 'О нашем с
                     include 'calc.php';
                     break;
                 default:
-                    include 'index.inc.php';
+                    include 'inc/index.inc.php';
             }
             ?>
                 <!-- Область основного контента -->
