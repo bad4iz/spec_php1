@@ -16,7 +16,7 @@ switch($id){ case 'about': $title = 'О сайте'; $header = 'О нашем с
 <html>
 
 <head>
-    <title>Сайт нашей школы</title>
+    <title><?php echo $title ?></title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="style.css"/>
 </head>
@@ -32,7 +32,7 @@ switch($id){ case 'about': $title = 'О сайте'; $header = 'О нашем с
 
 <div id="content">
     <!-- Заголовок -->
-    <h1><?= $welkome ?>, Гость!</h1>
+    <h1><?php echo $header?></h1>
     <!-- Заголовок -->
 
     <blockquote>
