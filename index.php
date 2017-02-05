@@ -1,6 +1,13 @@
 <?
 require_once "inc/lib.inc.php";
-require_once "inc/data.inc.php"
+require_once "inc/data.inc.php";
+
+
+
+
+$title = 'Сайт нашей школы';
+$header = "$welcome, Гость!";
+$id = strtolower(strip_tags(trim($_GET['id'])));
 ?>
 
 
