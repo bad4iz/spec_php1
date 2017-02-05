@@ -43,8 +43,24 @@ switch($id){ case 'about': $title = 'О сайте'; $header = 'О нашем с
         ?>
             </blockquote>
             <!-- Область основного контента -->
-            <?php switch($id){
-    case 'about': include 'about.php'; break; case 'contact': include 'contact.php'; break; case 'table': include 'table.php'; break; case 'calc': include 'calc.php'; break; default: include 'index.inc.php'; } ?>
+            <?php
+            switch($id){
+                case 'about':
+                    include 'about.php';
+                    break;
+                case 'contact':
+                    include 'contact.php';
+                    break;
+                case 'table':
+                    include 'table.php';
+                    break;
+                case 'calc':
+                    include 'calc.php';
+                    break;
+                default:
+                    include 'index.inc.php';
+            }
+            ?>
                 <!-- Область основного контента -->
         </div>
         <div id="nav">
