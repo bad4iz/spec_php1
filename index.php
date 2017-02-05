@@ -12,51 +12,54 @@ switch($id){ case 'about': $title = 'О сайте'; $header = 'О нашем с
 ?>
 
 
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html>
 
-<head>
-    <title><?php echo $title ?></title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="style.css"/>
-</head>
+    <head>
+        <title>
+            <?php echo $title ?>
+        </title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<body>
+    <body>
 
-<div id="header">
-    <!-- Верхняя часть страницы -->
-<? require_once "inc/top.inc.php"; ?>
+        <div id="header">
+            <!-- Верхняя часть страницы -->
+            <? require_once "inc/top.inc.php"; ?>
 
-    <!-- Верхняя часть страницы -->
-</div>
+                <!-- Верхняя часть страницы -->
+        </div>
 
-<div id="content">
-    <!-- Заголовок -->
-    <h1><?php echo $header?></h1>
-    <!-- Заголовок -->
+        <div id="content">
+            <!-- Заголовок -->
+            <h1><?php echo $header?></h1>
+            <!-- Заголовок -->
 
-    <blockquote>
-        <?
+            <blockquote>
+                <?
         echo "Сегодня $day число, $mon месяц, $year год.";
         ?>
-    </blockquote>
-    <!-- Область основного контента -->
-<? require_once "inc/index.inc.php" ?>
-    <!-- Область основного контента -->
-</div>
-<div id="nav">
-    <!-- Навигация -->
-<? require_once "inc/menu.inc.php"; ?>
-    <!-- Навигация -->
-</div>
-<div id="footer">
-    <?
+            </blockquote>
+            <!-- Область основного контента -->
+            <?php switch($id){
+    case 'about': include 'about.php'; break; case 'contact': include 'contact.php'; break; case 'table': include 'table.php'; break; case 'calc': include 'calc.php'; break; default: include 'index.inc.php'; } ?>
+                <!-- Область основного контента -->
+        </div>
+        <div id="nav">
+            <!-- Навигация -->
+            <? require_once "inc/menu.inc.php"; ?>
+                <!-- Навигация -->
+        </div>
+        <div id="footer">
+            <?
     drawMenu($leftMenu, false)
     ?>
-    <!-- Нижняя часть страницы -->
+                <!-- Нижняя часть страницы -->
 
-    <!-- Нижняя часть страницы -->
-</div>
-</body>
+                <!-- Нижняя часть страницы -->
+        </div>
+    </body>
 
-</html>
+    </html>
