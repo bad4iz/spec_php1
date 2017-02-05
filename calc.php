@@ -4,22 +4,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $num1 = abs((int)$_POST['num1']);
     $num2 = abs((int)$_POST['num2']);
     $operator = trim(strip_tags($_POST['operator']));
+    $visible = true;
 }
-$operator = preg_match('/[-+*\/]/',$operator) ? $operator : false;
-function mySum($num1, $num2,$operator){
     switch ($operator){
         case '+':
-            return $num1 + $num2;
+            $mySum = $num1 + $num2;
         case '-':
-            return $num1 - $num2;
+            $mySum = $num1 - $num2;
         case '/':
-            return $num1 / $num2;
+            $mySum = $num1 / $num2;
         case '*':
-            return $num1 * $num2;
-    }
-}
+            $mySum = $num1 * $num2;
+        default:
+            $mySum = 'error';
+            $operator = 'error';
 
-$result =   echo "$num1 $operator $num2 = " . mySum($num1,  $num2, $operator)
+    }
+
+
 
 ?>
 
@@ -42,4 +44,14 @@ $result =   echo "$num1 $operator $num2 = " . mySum($num1,  $num2, $operator)
     </form>
     <!-- Область основного контента -->
     <h1>Итого</h1>
-    <?=$result:$result?>
+
+    <?
+    if($visible){
+    if($operator == error){
+        echo "неправильный оператор";
+    } else
+    {
+        echo "$num1 $operator $num2 = $mySum ";
+    }
+    }
+?>
