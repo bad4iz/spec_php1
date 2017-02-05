@@ -9,7 +9,7 @@ $rows = ($rows) ? $rows : 10;
 $color = ($color) ? $color : 'yellow';
 ?>
     <!-- Область основного контента -->
-    <form action='<?= $_SERVER['REQUEST_URI']?>'>
+    <form action='<?= $_SERVER['REQUEST_URI']?>' method="post">
         <label>Количество колонок: </label>
         <br/>
         <input name='cols' type='text' value=""/>
