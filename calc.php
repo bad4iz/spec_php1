@@ -1,18 +1,18 @@
 <?
 $operator ='';
-$num1 = 0;
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $num1 = abs((int)$_POST['num1']);
     $num2 = abs((int)$_POST['num2']);
     $operator = trim(strip_tags($_POST['operator']));
 }
-//$operator = (preg_match('/[-+*/]/',$operator)) ? $operator : false;
+$operator = preg_match('/[-+*\/]/',$operator) ? $operator : false;
 function mySun($num1, $num2,$operator){
 
 }
 
 
 ?>
+   <?=$operator?>
     <!-- Область основного контента -->
     <form action='<?= $_SERVER['REQUEST_URI']?>' method="post">
       <label>Число 1:</label>
@@ -31,4 +31,4 @@ function mySun($num1, $num2,$operator){
       <input type='submit' value='Считать'>
     </form>
     <!-- Область основного контента -->
-<?=$operator?>
+
