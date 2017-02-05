@@ -19,10 +19,11 @@ if ($hour < 7) {
     $welkome = 'Доброй ночи';
 }
 
-$leftMenu = [['link' => 'Домой', 'href' => 'index.php'],
-    ['link' => 'О нас', 'href' => 'about.php'],
-    ['link' => 'Контакты', 'href' => 'contact.php'],
-    ['link' => 'Таблица умножения', 'href' => 'table.php'],
-    ['link' => 'Калькулятор', 'href' => 'calc.php']
+$leftMenu = [
+    ['link' => 'Домой', 'href' => 'index.php'],
+    ['link' => 'О нас', 'href' => 'index.php?id=about'],
+    ['link' => 'Контакты', 'href' => 'index.php?id=contact'],
+    ['link' => 'Таблица умножения', 'href' => 'index.php?id=table'],
+    ['link' => 'Калькулятор', 'href' => 'index.php?id=calc']
 ];
 
