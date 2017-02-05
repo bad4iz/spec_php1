@@ -28,7 +28,7 @@ $color = ($color) ? $color : 'yellow';
     <!-- Таблица -->
     <table border='1' width="200">
         <?
-        drawTable(3,5);
+
         ?>
 
     </table>
