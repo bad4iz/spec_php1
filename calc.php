@@ -9,12 +9,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     switch ($operator){
         case '+':
             $mySum = $num1 + $num2;
+            break;
         case '-':
             $mySum = $num1 - $num2;
+            break;
         case '/':
+            if($num2 == 0){
+                $mySum = 'на ноль делить нельзя';
+                break;
+                }
             $mySum = $num1 / $num2;
+            break;
         case '*':
             $mySum = $num1 * $num2;
+            break;
         default:
             $mySum = 'error';
             $operator = 'error';
@@ -47,11 +55,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     <?
     if($visible){
-    if($operator == error){
-        echo "неправильный оператор";
-    } else
-    {
-        echo "$num1 $operator $num2 = $mySum ";
-    }
-    }
+            echo "$num1 $operator $num2 = $mySum ";
+        }
 ?>
